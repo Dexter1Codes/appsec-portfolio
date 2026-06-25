@@ -2,7 +2,7 @@
 
 ## 1. What it is
 
-SQLi allows an attacker to interfere with the queries that an application makes to its database which makes them able to see the data that is not normally available. In most of the cases, the attacker can modify this data and can change the orientation of the application the data is accessed from.
+SQLi allows an attacker to interfere with the queries that an application makes to its database which makes them able to see the data that is not normally available. In most of the cases, the attacker can modify this data. Beyond reading, the attacker can often modify or delete data, and in some cases reach the underlying server or perform denial-of-service
 
 In some cases, this modification access can lead to server level changes or other back-end infrastructure. It can also make them able to perform denial-of-service.
 
@@ -48,7 +48,7 @@ SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
 
 ## 3. Real-world impact + CVSS
 
-**Severity: High → Critical** (typical CVSS **7.0 – 9.8**).
+**Severity: High → Critical** (typical CVSS **7.5+**).
 
 SQLi has driven some of the largest recorded data breaches. Impact includes credential and PII theft, payment-data exposure, unauthorised data modification and where the database account is over-privileged or stacked queries are possible, persistent back-doors, lateral movement, and denial of service.
 
